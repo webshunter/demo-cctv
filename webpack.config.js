@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   "mode": "none",
@@ -12,6 +14,16 @@ module.exports = {
       directory: path.join(__dirname, 'dist')
     }
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+        title: 'Project Demo',
+        // minify: {
+        //     collapseWhitespace: true
+        // },
+        hash: true,
+        template: './src/index.html', // Load a custom template (ejs by default see the FAQ for details)
+    })
+  ],
   "devtool": "source-map",
   "module": {
     "rules": [
