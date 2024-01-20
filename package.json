@@ -35,8 +35,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "ejs": "^3.1.9",
     "extract-text-webpack-plugin": "^3.0.2",
+    "ezuikit-js": "^8.0.0",
     "live-server": "^1.2.2"
   }
 }
