@@ -578,8 +578,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var player1 = document.getElementById("video-container");
-var w = player1.clientWidth;
+
 
 function POST(ln) {
     this.link = ln;
@@ -611,7 +610,9 @@ function POST(ln) {
     return this;
 }
 
-const player2 = function(token){
+const plyr = {}
+
+plyr.player2 = function(token){
     let player = document.getElementById("video-container2");
     let w2 = player.clientWidth;
     const ply = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlayer)({
@@ -629,48 +630,66 @@ const player2 = function(token){
     return ply;
 } 
 
-const callNewToken = function(){
+plyr.player = function (token){
+    var player1 = document.getElementById("video-container");
+    var w = player1.clientWidth;
+    const ply = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlayer)({
+        id: 'video-container',
+        url: 'ezopen://open.ezviz.com/D76265573/1.live',
+        autoplay: true,
+        accessToken: token,
+        template: 'pcLive',
+        width: w,
+        height: 400,
+        env: {
+            domain: "https://isgpopen.ezvizlife.com"
+        }
+    });
+} 
+
+const callNewToken = function(id , idplay, appKey, appSecret){
     new POST('https://open.ezvizlife.com/api/lapp/token/get')
         .data({
-            appKey: 'cd3807c3ddf64098a4628eb188101b04', appSecret: '50793f889ca74387bb9028029da6137b'
+            appKey: appKey, appSecret: appSecret
         })
         .then(function (res) {
             let data = {
                 token: res.data.accessToken ? res.data.accessToken : null,
                 expired: res.data.expireTime ? res.data.expireTime : null
             };
-            localStorage.setItem('key-client2', btoa(JSON.stringify(data)));
-            player2(data.token)
+            localStorage.setItem(id, btoa(JSON.stringify(data)));
+            plyr[idplay](data.token);
         }, function (err) {
             console.log(err)
         })
 }
 
+if(!localStorage.getItem('key-client')){
+    callNewToken('key-client', 'player', 'ba8856216e3b4f2681c0c7c706d37df8', '50793f889ca74387bb9028029da6137b');
+} else {
+    let data = JSON.parse(atob(localStorage.getItem('key-client')));
+    if (data.expired < Date.now()){
+        callNewToken('key-client', 'player', 'ba8856216e3b4f2681c0c7c706d37df8', '50793f889ca74387bb9028029da6137b');
+    }else{
+        plyr['player'](data.token)
+        console.log(data.expired)
+    }
+};
+
 if(!localStorage.getItem('key-client2')){
-    callNewToken();
+    callNewToken('key-client2', 'player2', 'cd3807c3ddf64098a4628eb188101b04', '50793f889ca74387bb9028029da6137b');
 } else {
     let data = JSON.parse(atob(localStorage.getItem('key-client2')));
     if (data.expired < Date.now()){
-        callNewToken();
+        callNewToken('key-client2', 'player2', 'cd3807c3ddf64098a4628eb188101b04', '50793f889ca74387bb9028029da6137b');
     }else{
-        player2(data.token)
+        plyr['player2'](data.token)
         console.log(data.expired)
     }
 }
 
 
-var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlayer)({
-    id: 'video-container',
-    url: 'ezopen://open.ezviz.com/D76265573/1.live',
-    autoplay: true,
-    accessToken: "at.2woo7ro34v66nia077hwk23n3fa1rvbf-3k7pom88cq-19muc9b-oppzktz1e",
-    template: 'pcLive',
-    width: w,
-    height: 400,
-    env:{
-    	domain: "https://isgpopen.ezvizlife.com"
-    }
-});
+
 
 
 
