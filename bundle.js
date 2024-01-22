@@ -675,7 +675,7 @@ var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlaye
     id: 'video-container',
     url: 'ezopen://open.ezviz.com/D76265573/1.live',
     autoplay: true,
-    accessToken: "at.3e4df1kgbwdx202h8b96kwmj6j6kcmxz-839qr4f7fa-0dllssw-6zgclci2b",
+    accessToken: "at.c9rdnxkgdfms7jdl4p155a974o3iirs7-2veg476opa-1vbju1s-dg739pgxc",
     width: 600,
     height: 400,
 });
