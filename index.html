@@ -2,12 +2,20 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta charset="UTF-8">
     <title>Project Demo</title>
-  <script defer src="bundle.js?d1c5eec4c628dfcd1aa8"></script></head>
+    <script src="./ezuikit.js"></script>
+  <script defer src="bundle.js?37335adb988417e57f65"></script></head>
   <body>
-    <div id="video-container"></div>
+    <!-- ezopen://open.ys7.com/f01018a141094b7fa138b9d0b856507b[.hd].live.[rtmp|hls|ws|flv|m3u8] http://hls.open.ys7.com/openlive/f01018a141094b7fa138b9d0b856507b.hd.m3u8-->
+    <div class="hint">demo页面仅为代码示例无法直接运行，需要部署到服务器上才可以播放。另外监控模式与多窗口模式对浏览器版本有要求：Chrome: 55+ Firefox: V55+。</div>
+    <textarea id="url"
+      placeholder="这里输入直播地址">https://isgpopen.ezvizlife.com/v3/openlive/D76265573_1_2.m3u8?expire=1768106759&id=669523157507092480&c=5b2c9f1423&t=73d1b55b34843e5c7d7db6f2b6f00b723f38ec5762ef977a411480f37a0843d0&ev=100</textarea>
+    <div class="btn-container">
+      <button id="init">初始化播放</button>
+      <button id="stop">结束</button>
+    </div>
+    
+    <video id="myPlayer" autoplay src="" controls playsInline webkit-playsinline>
+    </video>
   </body>
 </html>
