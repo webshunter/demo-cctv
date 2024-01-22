@@ -11,5 +11,17 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import ezuikit from 'ezuikit-js';
 
+console.log(ezuikit);
 
-console.log('This is the JavaScript entry file - your code begins here.');
+const player = new ezuikit.EZUIKitPlayer({
+    id: 'video-container', // 视频容器ID
+    accessToken: 'at.3e4df1kgbwdx202h8b96kwmj6j6kcmxz-839qr4f7fa-0dllssw-6zgclci2b',
+    url: 'ezopen://open.ezviz.com/D76265573/1.live',
+    width: 600,
+    height: 400,
+    handleError: (err) => {
+        if (err.type === "handleRunTimeInfoError" && err.data.nErrorCode === 5) {
+            // 加密设备密码错误
+        }
+    },
+})
