@@ -660,13 +660,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var ezuikit_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
 /* harmony import */ var ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ezuikit_js__WEBPACK_IMPORTED_MODULE_3__);
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
-
-// An example of how you tell webpack to use a CSS (SCSS) file
 
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
+
 
 
 
@@ -675,18 +671,15 @@ __webpack_require__.r(__webpack_exports__);
 
 console.log((ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default()));
 
-const player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlayer)({
-    id: 'video-container', // 视频容器ID
-    accessToken: 'at.3e4df1kgbwdx202h8b96kwmj6j6kcmxz-839qr4f7fa-0dllssw-6zgclci2b',
-    url: 'ezopen://open.ezviz.com/D76265573/1.live',
+var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlayer)({
+    id: 'video-container',
+    url: url,
+    autoplay: true,
+    accessToken: "at.3e4df1kgbwdx202h8b96kwmj6j6kcmxz-839qr4f7fa-0dllssw-6zgclci2b",
+    decoderPath: 'ezopen://open.ezviz.com/D76265573/1.live',
     width: 600,
     height: 400,
-    handleError: (err) => {
-        if (err.type === "handleRunTimeInfoError" && err.data.nErrorCode === 5) {
-            // 加密设备密码错误
-        }
-    },
-})
+});
 
 })();
 
