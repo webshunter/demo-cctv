@@ -675,18 +675,15 @@ __webpack_require__.r(__webpack_exports__);
 
 console.log((ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default()));
 
-const player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlayer)({
-    id: 'video-container', // 视频容器ID
-    accessToken: 'at.3e4df1kgbwdx202h8b96kwmj6j6kcmxz-839qr4f7fa-0dllssw-6zgclci2b',
-    url: 'ezopen://open.ezviz.com/D76265573/1.live',
+var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlayer)({
+    id: 'video-container',
+    url: url,
+    autoplay: true,
+    accessToken: "at.3e4df1kgbwdx202h8b96kwmj6j6kcmxz-839qr4f7fa-0dllssw-6zgclci2b",
+    decoderPath: 'ezopen://open.ezviz.com/D76265573/1.live',
     width: 600,
     height: 400,
-    handleError: (err) => {
-        if (err.type === "handleRunTimeInfoError" && err.data.nErrorCode === 5) {
-            // 加密设备密码错误
-        }
-    },
-})
+});
 
 })();
 
