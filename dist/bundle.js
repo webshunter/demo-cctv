@@ -580,23 +580,22 @@ __webpack_require__.r(__webpack_exports__);
 
 console.log((ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default()));
 
+var player1 = document.getElementById("video-container");
+
+var w = player1.clientWidth;
+
 var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlayer)({
     id: 'video-container',
     url: 'ezopen://open.ezviz.com/D76265573/1.live',
     autoplay: true,
     accessToken: "at.c9rdnxkgdfms7jdl4p155a974o3iirs7-2veg476opa-1vbju1s-dg739pgxc",
-    width: 600,
+    template: 'pcLive',
+    width: w,
     height: 400,
     env:{
     	domain: "https://isgpopen.ezvizlife.com"
     }
 });
-
-(function loadCanvas(){
-    let getCanvas = document.querySelectorAll('.video');
-    console.log("ok");
-    getCanvas.length === 0 ? setTimeout(() => loadCanvas(),1000):null; 
-})();
 
 
 player.getRealUrl()

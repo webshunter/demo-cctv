@@ -15,7 +15,7 @@ var player = new ezuikit.EZUIKitPlayer({
     autoplay: true,
     accessToken: "at.c9rdnxkgdfms7jdl4p155a974o3iirs7-2veg476opa-1vbju1s-dg739pgxc",
     template: 'pcLive',
-    width: 600,
+    width: w,
     height: 400,
     env:{
     	domain: "https://isgpopen.ezvizlife.com"
