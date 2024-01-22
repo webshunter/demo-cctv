@@ -588,7 +588,7 @@ var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlaye
     id: 'video-container',
     url: 'ezopen://open.ezviz.com/D76265573/1.live',
     autoplay: true,
-    accessToken: "at.c9rdnxkgdfms7jdl4p155a974o3iirs7-2veg476opa-1vbju1s-dg739pgxc",
+    accessToken: "at.7zuyvnhs19lx7cux6m3837e376uxpanb-7smwyb28gy-0rmxg50-9swfm8r8l",
     template: 'pcLive',
     width: w,
     height: 400,
