@@ -601,7 +601,7 @@ document.getElementById('video-container-capturePicture-content').setAttribute("
 document.getElementById('video-container-sound-content').setAttribute("title","Sound");
 document.getElementById('video-container-pantile-content').setAttribute("title","PTZ Control");
 document.getElementById('video-container-recordvideo-content').setAttribute("title","Record Screen");
-document.getElementById('video-container-talk-icon').setAttribute("title","Intercom");
+document.getElementById('video-container-talk-content').setAttribute("title","Talk");
 document.getElementById('video-container-zoom-content').setAttribute("title","Zoom");
 document.getElementById('video-container-hd-content').setAttribute("title","Resolution");
 document.getElementById('video-container-webExpend-content').setAttribute("title","Full Screen Mode");
