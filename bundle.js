@@ -683,6 +683,8 @@ var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlaye
     }
 });
 
+player.getRealUrl()
+
 })();
 
 /******/ })()
