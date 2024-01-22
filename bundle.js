@@ -13617,8 +13617,6 @@ $('#init').click(function () {
     player.on('log', log);
 
     function log(str) {
-        var div = document.createElement('DIV');
-        div.innerHTML = (new Date()).Format('yyyy-MM-dd hh:mm:ss.S') + JSON.stringify(str);
     }
     $("#stop").click(function () {
         player.stop();
