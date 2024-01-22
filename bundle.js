@@ -684,7 +684,7 @@ var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_3___default().EZUIKitPlaye
     }
 });
 
-document.getElementById('video-container-play-content').title="Play/Stop";
+document.getElementById('video-container-play-content').setAttribute("title","Play/Stop");
 })();
 
 /******/ })()
