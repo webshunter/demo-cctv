@@ -14,6 +14,7 @@ var player = new ezuikit.EZUIKitPlayer({
     url: 'ezopen://open.ezviz.com/D76265573/1.live',
     autoplay: true,
     accessToken: "at.c9rdnxkgdfms7jdl4p155a974o3iirs7-2veg476opa-1vbju1s-dg739pgxc",
+    template: 'pcLive',
     width: 600,
     height: 400,
     env:{
