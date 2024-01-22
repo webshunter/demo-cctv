@@ -606,8 +606,6 @@ document.getElementById('video-container-zoom-content').setAttribute("title","Zo
 document.getElementById('video-container-hd-content').setAttribute("title","Resolution");
 document.getElementById('video-container-webExpend-content').setAttribute("title","Full Screen Mode");
 document.getElementById('video-container-expend-content').setAttribute("title","Full Screen");
-document.getElementById('video-container-select-quality_1').innerHTML = "SD";
-document.getElementById('video-container-select-quality_0').innerHTML = "HD";
 player.getRealUrl();
 })();
 
