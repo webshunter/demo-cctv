@@ -598,7 +598,7 @@ var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlaye
 });
 
 
-player.getRealUrl()
+player.getRealUrl();
 
 document.getElementById('video-container-play-content').setAttribute("title","Play/Stop");
 document.getElementById('video-container-capturePicture-content').setAttribute("title","Screenshot");
