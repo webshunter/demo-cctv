@@ -22,6 +22,7 @@ var player = new ezuikit.EZUIKitPlayer({
     }
 });
 
+
 var player2 = new ezuikit.EZUIKitPlayer({
     id: 'video-container2',
     url: 'ezopen://open.ezviz.com/D78805686/1.live',
@@ -30,10 +31,19 @@ var player2 = new ezuikit.EZUIKitPlayer({
     template: 'pcLive',
     width: w,
     height: 400,
-    env:{
-    	domain: "https://isgpopen.ezvizlife.com"
+    env: {
+        domain: "https://isgpopen.ezvizlife.com"
     }
 });
 
-
-player.getRealUrl()
+document.getElementById('video-container-play-content').setAttribute("title","Play/Stop");
+document.getElementById('video-container-capturePicture-content').setAttribute("title","Screenshot");
+document.getElementById('video-container-sound-content').setAttribute("title","Sound");
+document.getElementById('video-container-pantile-content').setAttribute("title","PTZ Control");
+document.getElementById('video-container-recordvideo-content').setAttribute("title","Record Screen");
+document.getElementById('video-container-talk-content').setAttribute("title","Talk");
+document.getElementById('video-container-zoom-content').setAttribute("title","Zoom");
+document.getElementById('video-container-hd-content').setAttribute("title","Video Resolution");
+document.getElementById('video-container-webExpend-content').setAttribute("title","Full Screen Mode");
+document.getElementById('video-container-expend-content').setAttribute("title","Full Screen");
+player.getRealUrl();
