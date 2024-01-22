@@ -13,7 +13,7 @@ var player = new ezuikit.EZUIKitPlayer({
     id: 'video-container',
     url: 'ezopen://open.ezviz.com/D76265573/1.live',
     autoplay: true,
-    accessToken: "at.c9rdnxkgdfms7jdl4p155a974o3iirs7-2veg476opa-1vbju1s-dg739pgxc",
+    accessToken: "at.2woo7ro34v66nia077hwk23n3fa1rvbf-3k7pom88cq-19muc9b-oppzktz1e",
     template: 'pcLive',
     width: w,
     height: 400,
