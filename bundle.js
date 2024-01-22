@@ -603,7 +603,7 @@ document.getElementById('video-container-pantile-content').setAttribute("title",
 document.getElementById('video-container-recordvideo-content').setAttribute("title","Record Screen");
 document.getElementById('video-container-talk-content').setAttribute("title","Talk");
 document.getElementById('video-container-zoom-content').setAttribute("title","Zoom");
-document.getElementById('video-container-hd-content').setAttribute("title","Resolution");
+document.getElementById('video-container-hd-content').setAttribute("title","Video Resolution");
 document.getElementById('video-container-webExpend-content').setAttribute("title","Full Screen Mode");
 document.getElementById('video-container-expend-content').setAttribute("title","Full Screen");
 player.getRealUrl();
