@@ -586,7 +586,7 @@ var w = player1.clientWidth;
 
 var player = new (ezuikit_js__WEBPACK_IMPORTED_MODULE_1___default().EZUIKitPlayer)({
     id: 'video-container',
-    url: 'ezopen://open.ezviz.com/D76265573/1.live',
+    url: 'ezopen://YAMRMQ@open.ezviz.com/203751922/1.rec',
     autoplay: true,
     accessToken: "at.7zuyvnhs19lx7cux6m3837e376uxpanb-7smwyb28gy-0rmxg50-9swfm8r8l",
     template: 'pcLive',
