@@ -28,6 +28,7 @@
   },
   "scripts": {
     "start": "webpack serve",
+    "dev": "webpack-dev-server --open --mode development --no-client-overlay",
     "build": "webpack",
     "test": "mochapack 'test/**/*.js'",
     "lint": "./node_modules/.bin/eslint 'src/**.js' 'test/**.js'",

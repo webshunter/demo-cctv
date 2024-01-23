@@ -5,9 +5,9 @@ instalasi
 ```bash
 npm install --force
 ```
-run server
+run server development live reload 
 ```bash
-node index
+npm run dev
 ```
 posting ke github pages
 ```bash

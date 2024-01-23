@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  "mode": "none",
+  "mode": "production",
   "entry": "./src/scripts.js",
   "output": {
     "path": __dirname + '/dist',
@@ -17,9 +17,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
         title: 'Project Demo',
-        // minify: {
-        //     collapseWhitespace: true
-        // },
+        minify: {
+            collapseWhitespace: true
+        },
         hash: true,
         template: './src/index.html', // Load a custom template (ejs by default see the FAQ for details)
     })
@@ -48,5 +48,24 @@ module.exports = {
         ]
       }
     ]
+  },
+  performance: {
+    hints: false
+  },
+  devServer: {
+    open: true,
+    hot: false, // disable hot reload for plain HTML/CSS/JS development
+    compress: true,
+    client: {
+      logging: 'none',
+      overlay: {
+        errors:false,
+        warnings:false
+      }
+    },
+    static: {
+      directory: path.join(__dirname, 'src'),
+      publicPath: '/'
+    }
   }
 };
